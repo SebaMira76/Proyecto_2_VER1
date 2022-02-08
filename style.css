@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap');
+
+:root {
+    --font-placeholder: 1em;
+    --font-tilte: 4em;
+    --font-parrafo: 1.5em;
+    --font-label: 1em;
+    --font-footer: .8em;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #f3f3f3;
+    padding: 0 1.5rem;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: #1b1b32;
+    background-image: linear-gradient(115deg, rgba(47, 47, 163, 0.8),rgba(187, 187, 216, 0.9)), url(https://multiconversion.com/wp-content/uploads/2019/07/cargos-en-marketing-digital.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: var(--font-tilte);
+  font-weight: 700;
+}
+
+#description {
+  text-align: center;
+  font-size: var(--font-parrafo);
+}
+
+main {
+ margin: auto;
+}
+
+form {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3);
+  max-width: 750px;
+  height: auto;
+  padding: 0.1em;
+}
+
+form p {
+  font-size: var(--font-parrafo);
+  font-weight: 700;
+  margin: 25px 0 5px 0;
+  
+}
+
+form label {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-label);
+  margin-bottom: 4px;
+}
+
+
+
+#survey-form {
+  background: #2d2c4b;
+  margin: auto;
+  padding: 2rem 4rem;
+  border-radius: 3em;
+}
+
+#name, #email, #number {
+  width: 100%;
+  height: 35px;
+  font-size: var(--font-placeholder);
+  border-radius: 0.25rem;
+}
+
+.labelTxt {
+  font-size: var(--font-parrafo);
+  margin: 25px 0 5px 0;
+}
+
+select {
+  width: 50%;
+  height: 35px;
+  font-size: var(--font-placeholder);
+  border-radius: 0.25rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  font-size: var(--font-placeholder);
+  border-radius: 0.25rem;
+}
+
+span {
+  font-size: var(--font-placeholder);
+}
+
+button {
+  border: none;
+  border-radius: 0.25rem;
+  font-size: var(--font-label);
+  height: 40px;
+  width: 100%;
+  background-color: #899900;
+  color: #ffffff;
+}
+button:hover, button:focus {
+  background-color: #898800;
+}
+
+
+footer {
+  font-weight: 400;
+  font-size: var(--font-footer);
+  text-align: center;
+  color: #000
+}
+
+@media (max-width: 750px) {
+  :root {
+    --font-placeholder: .9m;
+    --font-tilte: 3em;
+    --font-parrafo: 1.2em;
+    --font-label: .9em;
+    --font-footer: .7em;
+  }
+  #survey-form {
+    background: #302d5f;
+    margin: auto;
+    padding: 1.5em 3em;
+    border-radius: 2em;
+  }
+  button {
+    height: 30px;
+    width: 100%;
+   }
+}
+@media (max-width: 600px) {
+  :root {
+    --font-placeholder: .7em;
+    --font-tilte: 2.5em;
+    --font-parrafo: 1em;
+    --font-label: .7em;
+    --font-footer: .6em;
+  }
+  #survey-form {
+    background: #302e70;
+    margin: auto;
+    padding: 1em 2em;
+    border-radius: 2em;
+  }
+  button {
+    height: 20px;
+    width: 100%;
+   }
+}
+@media (max-width: 400px) {
+  :root {
+    --font-placeholder: .6em;
+    --font-tilte: 2em;
+    --font-parrafo: .8em;
+    --font-label: .6em;
+    --font-footer: .4em;
+  }
+  #survey-form {
+    background: #201c88;
+    margin: auto;
+    padding: .7em 1.5em;
+    border-radius: 2em;
+  }
+  button {
+    height: 17px;
+    width: 100%;
+   }
+}
+
+
+
+
+

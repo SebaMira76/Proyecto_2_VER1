@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+ 
+
+  <title>Formulario de Datos</title>
+
+</head>
+
+<body>
+  <main>
+    <header>
+      <!-- Historia de Usuario #1: Puedo ver un título con id="title" en texto tamaño H1. -->
+      <h1 id="tilte">FreeCodeCamp Formularios de Encuesta</h1>
+      <!-- Historia de Usuario #2: Puedo ver una breve explicación con id="description" en texto tamaño P. -->
+      <p id="description">Gracias por tomarse el tiempo de completar esta encuesta para mejorar nuestro sitio</p>
+    </header>
+
+    <!-- Historia de Usuario #3: Puedo ver un elemento form con id="survey-form". -->
+    <form id="survey-form">
+      <div>
+        <!-- Historia de Usuario #10: Para los campos nombre, correo, y número dentro del formulario puedo ver las etiquetas (labels) correspondientes que describen el propósito de cada campo con los siguientes ids: id="name-label", id="email-label", y id="number-label".
+        Historia de Usuario #11: Para los campos nombre, correo y número, puedo ver el texto provisional que me da una descripción o instrucciones para cada campo. -->
+        <label for="nom_lbl" id="name-label" class="labelTxt">Nombre y Apellido</label>
+         <!-- Historia de Usuario #4: Dentro del elemento form, es requerido introducir mi nombre en un campo con id="name". -->
+         <input type="text" name="nombre" id="name" placeholder="Ingrese su Nombre y Apellido">
+      </div>
+
+      <div>
+        <!-- Historia de Usuario #10: Para los campos nombre, correo, y número dentro del formulario puedo ver las etiquetas (labels) correspondientes que describen el propósito de cada campo con los siguientes ids: id="name-label", id="email-label", y id="number-label".
+        Historia de Usuario #11: Para los campos nombre, correo y número, puedo ver el texto provisional que me da una descripción o instrucciones para cada campo. -->
+        <label for="eMail-lbl" id="email-label" class="labelTxt">eMail</label>
+         <!-- Historia de Usuario #5: Dentro del elemento form, es requerido introducir un correo electrónico en un campo con id="email".
+          Historia de Usuario #6: Si introduzco un correo electrónico que no cuente con el formato correcto, veré un error de validación HTML5. -->
+          <input type="email" name="email" id="email" placeholder="Ingrese su eMail" required>
+      </div>
+
+      <div>
+        <!-- Historia de Usuario #10: Para los campos nombre, correo, y número dentro del formulario puedo ver las etiquetas (labels) correspondientes que describen el propósito de cada campo con los siguientes ids: id="name-label", id="email-label", y id="number-label".
+        Historia de Usuario #11: Para los campos nombre, correo y número, puedo ver el texto provisional que me da una descripción o instrucciones para cada campo. -->
+        <label for="edad-lbl" id="number-label" class="labelTxt">Edad <span> (Opcional) </span></label>
+        <!-- Historia de Usuario #8: Si introduzco valores no numéricos en la entrada de números, veré un error de validación HTML5.
+          Historia de Usuario #9: Si introduzco números fuera del rango de la entrada de números, los cuales son definidos por los atributos min y max, veré un error de validación HTML5. -->
+          <input type="number" name="edad" id="number" placeholder="Ingrese su Edad" min="10" max="99">
+      </div>
+
+      <div>
+        <label for="rol-lbl" class="labelTxt">Cual es la mejor opción que descibe su rol actual?</label>
+        <!-- Historia de Usuario #12: Dentro del elemento form, puedo seleccionar una opción de un menú desplegable que tiene el respectivo id="dropdown". -->
+        <select name="rol-select" id="dropdown" required>
+          <option value="selec-op" disable selected d>Seleccionar Rol Actual</option>
+          <option value="estudiante-op">Estudiante</option>
+          <option value="trabajoFullTime-op">Trabajo Full Time</option>
+          <option value="estFullTime-op">Estudiante Full Time</option>
+          <option value="noDecirlo-op">Prefiero no decirlo</option>
+          <option value="otro-op">Otro</option>
+        </select>
+      </div>
+
+      <div>
+        <p>Recomendarías FreeCodeCamp a un amigo?</p>
+        <!-- Historia de Usuario #13: Dentro del elemento form, puedo seleccionar un campo de uno o más grupos de botones de radio. Cada grupo debe agruparse utilizando el atributo name. -->
+        <label for="si-lbl">
+          <input type="radio" name="recom_BttRad" id="" value="si"  checked>SI
+        </label>
+        <label for="tv-lbl">
+          <input type="radio" name="recom_BttRad" id="" value="tv">Tal vez
+        </label>
+        <label for="no-lbl">
+          <input type="radio" name="recom_BttRad" id="" value="no">SI
+        </label>
+      </div>
+
+      <div>
+        <label for="carac-lbl" class="labelTxt">Cúal es la mejor característica de FreeCodeCamp?</label>
+        <select name="carac-select" id="" required>
+          <option value="carac-op" selected disabled>Seleccionar una característica</option>
+          <option value="desafios-op">Desafíos</option>
+          <option value="proyectos-op">Proyectos</option>
+          <option value="comunnidad-op">Comunidad</option>
+          <option value="codAbierto-op">Código Abierto</option>
+        </select>
+      </div>
+
+      <div>
+        <p>Que nuevas características le gustaria ver desarrolladas?</p>
+        <!-- Historia de Usuario #14: Dentro del elemento form, puedo seleccionar varios campos en una serie de casillas de verificación, cada una de las cuales debe tener un atributo value. -->
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_frontEnd" checked>Proyectos Front-End</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_backEnd">Proyectos Back End</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+           value="nuevo_proy_desafios">Retos (Challenges)</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_comunidad">Nuevas Comunidades</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_ayudaGitter">Sala de ayuda de Gitter</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_videos">Videos</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_reuniones">Reuniones</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_wiki">WIKI</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_foros">Foros</label>
+        <label><input type="checkbox" name="preferencia" class="input-CheckBox" 
+            value="nuevo_proy_cursos">Cursos</label>
+      </div>
+
+      <div>
+        <p>Algún comentarios o sugerencia?</p>
+        <!-- Historia de Usuario #15: Dentro del elemento form, me es presentado un textarea final para hacer comentarios adicionales. -->
+        <textarea name="areaComentarios" id="comentarios" placeholder="Ingrese sus comentarios..."></textarea>
+      </div>
+      <div>
+        <!-- Historia de Usuario #16: Dentro del elemento form, me es presentado un botón con id="submit" para enviar todas mis entradas. -->
+        <button type="submit" id="submit" class="submit-button">Enviar información</button>
+      </div>
+
+    </form>
+    <footer>
+      <p>Fuente de la informacion <strong>FreeCodeCamp</strong>  y <strong>CodePen</strong> <br>
+      <a href="https://www.freecodecamp.org"> FreeCodeCamp Web Site</a><br>
+      <a href="https://codepen.io/freeCodeCamp/pen/VPaoNP">Proyecto CodePen </a><br>
+      Elavorado por Sebastian Miranda <br> 
+      2do Proyecto de diseño web responsivo - Diseño de Formulario
+    </p>
+    </footer>
+  </main>
+</body>
+
+</html>
